@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cutto - Home</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="header">
+      <nav>
+        <div class="logo">
+          <h4>CUTTO</h4>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </section>
+    <section id="hero">
+      <div class="hero">
+        <div class="left">
+          <h1>Cut out your large URL!</h1>
+          <p>A free URL shortener to help you share your link easily.</p>
+          <button
+            class="primary-btn"
+            onclick="document.getElementById('ipURL').focus()"
+          >
+            Get Started
+          </button>
+        </div>
+        <div class="right">
+          <img src="/images/home.jpg" alt="Hero Image" width="80%" />
+        </div>
+      </div>
+    </section>
+    <section id="shortener">
+      <form action="/" method="post">
+        <div class="req-type-ip">
+          <select name="protocol">
+            <option selected value="https">HTTPS</option>
+            <option value="http">HTTP</option>
+          </select>
+        </div>
+        <div class="url-ip">
+          <input
+            type="text"
+            id="ipURL"
+            name="inputURL"
+            placeholder="Enter URL"
+          />
+        </div>
+        <div class="alias-ip">
+          <input
+            type="text"
+            id="ipPath"
+            name="inputPath"
+            placeholder="Enter Path"
+          />
+        </div>
+        <div class="sm">
+          <button type="submit" class="submit-btn">Generate</button>
+        </div>
+      </form>
+    </section>
+    <script src="scripts.js"></script>
+  </body>
+</html>
