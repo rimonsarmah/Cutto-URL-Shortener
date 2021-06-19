@@ -6,12 +6,14 @@
 
 h1 {
   margin-bottom: 10px;
+  font-size: 60px;
+}
+h2 {
+  margin-bottom: 8px;
+  font-size: 40px;
 }
 p {
   margin-bottom: 15px;
-}
-h1 {
-  font-size: 60px;
 }
 p {
   font-size: 20px;
@@ -118,7 +120,7 @@ nav {
 
 .hero {
   display: flex;
-  justify-content: space-bet;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -134,6 +136,7 @@ nav {
 }
 
 .primary-btn {
+  margin-top: 5px;
   background-color: dodgerblue;
   border: none;
   width: 150px;
@@ -225,4 +228,10 @@ form {
   form {
     flex-direction: column;
   }
+}
+/*--------------------------------About-------------------------------*/
+
+#about-hero,
+#success-hero {
+  padding: 3% 15%;
 }
