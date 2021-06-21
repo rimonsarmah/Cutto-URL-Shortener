@@ -2,18 +2,22 @@
   margin: 0;
   padding: 0;
   color: rgb(77, 77, 77);
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   margin-bottom: 10px;
   font-size: 60px;
+  font-family: "Raleway", sans-serif;
 }
 h2 {
   margin-bottom: 8px;
   font-size: 40px;
+  font-family: "Raleway", sans-serif;
 }
 p {
   margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 p {
   font-size: 20px;
@@ -51,6 +55,10 @@ nav {
   letter-spacing: 3px;
   font-size: 14px;
   font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: rgb(57, 153, 250);
 }
 
 .burger {
