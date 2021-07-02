@@ -1,7 +1,7 @@
-$(".burger").click(() => {
-  $(".nav-links").toggleClass("nav-active");
+$(".get-start-button").click(() => {
+  $(".shortener-form-input").focus();
 });
 
-$("#success-page-btn").click(() => {
-  location.replace("/");
+$(".burger").click(() => {
+  $(".nav-items").toggleClass("nav-items-active");
 });
