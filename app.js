@@ -45,10 +45,27 @@ app.post("/generate", (req, res) => {
     _id: shortid.generate(),
     link: inputURL,
   });
-  newURL.save().then((res) => {
-    console.log(res);
-  });
-  res.render("index");
+  newURL
+    .save()
+    .then((result) => {
+      console.log(result);
+      res.render("result", {
+        completionStatus: "URL Successfully Shortened",
+        content:
+          " Long URLs are not convenient for sharing and are not easy to understand. So, Cutto is here to offer you free URL shortening service. Here is your shortened URL!",
+        gradColor: "background: linear-gradient(#56ab2f, #a8e063)",
+        shortenedURl: "cutto.link/" + result._id,
+      });
+    })
+    .catch((result) => {
+      console.log(result);
+      res.render("result", {
+        completionStatus: "Uh! Oh!",
+        content: "It's not you. It's us",
+        gradColor: "background: linear-gradient(#eb3349,#f45c43)",
+        shortenedURl: "A mistake is to commit a misunderstanding",
+      });
+    });
 });
 
 app.get("/:link", (req, res) => {
@@ -57,7 +74,11 @@ app.get("/:link", (req, res) => {
     if (found) {
       res.redirect(found.link);
     } else {
-      res.send("Not found");
+      res.render("404", {
+        completionStatus: "404 : NOT FOUND",
+        content: "Please check the URL",
+        gradColor: "background: linear-gradient(#eb3349,#f45c43)",
+      });
     }
   });
 });

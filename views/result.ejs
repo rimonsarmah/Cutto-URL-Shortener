@@ -28,7 +28,7 @@
       ></script>
     </head>
     <body>
-      <section id="top">
+      <section id="top" style="<%= gradColor %>">
         <section id="nav-section">
           <div class="nav-bar">
             <div class="brand">
@@ -38,7 +38,6 @@
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
-              <li><button class="get-start-button">Get Started</button></li>
             </ul>
             <div class="burger">
               <div class="line"></div>
@@ -48,23 +47,20 @@
           </div>
         </section>
         <div class="hero">
-          <h1>Welcome to Cutto</h1>
-          <p>
-            Long URLs are not convenient for sharing and are not easy to
-            understand. So, Cutto is here to offer you free URL shortening
-            service. Let's cut it out!
-          </p>
-          <form action="/generate" method="post">
-            <input
-              class="shortener-form-input"
-              type="text"
-              name="inputURl"
-              id="ipURl"
-              placeholder="Paste your URL here"
-              required
-            />
-            <button class="shorten-button" type="submit">Shorten</button>
-          </form>
+          <h1><%= completionStatus %></h1>
+          <p><%= content %></p>
+
+          <input
+            class="shortener-form-input"
+            type="text"
+            name="inputURl"
+            id="ipURl"
+            value="<%= shortenedURl %> "
+            readonly
+          />
+          <button class="shorten-button" id="copy-btn" onclick="copyText()">
+            Copy
+          </button>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
