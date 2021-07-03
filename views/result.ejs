@@ -36,7 +36,6 @@
             </div>
             <ul class="nav-items">
               <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="burger">
@@ -50,17 +49,19 @@
           <h1><%= completionStatus %></h1>
           <p><%= content %></p>
 
-          <input
-            class="shortener-form-input"
-            type="text"
-            name="inputURl"
-            id="ipURl"
-            value="<%= shortenedURl %> "
-            readonly
-          />
-          <button class="shorten-button" id="copy-btn" onclick="copyText()">
-            Copy
-          </button>
+          <div class="result-details" style="<%= navBarGrad %> ">
+            <input
+              class="shortener-form-input"
+              type="text"
+              name="inputURl"
+              id="ipURl"
+              value="<%= shortenedURl %> "
+              readonly
+            />
+            <button class="shorten-button" id="copy-btn" onclick="copyText()">
+              Copy
+            </button>
+          </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path

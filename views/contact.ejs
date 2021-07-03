@@ -47,22 +47,34 @@
           </div>
         </section>
         <div class="hero">
-          <h1>Welcome to Cutto</h1>
-          <p>
-            Long URLs are not convenient for sharing and are not easy to
-            understand. So, Cutto is here to offer you free URL shortening
-            service. Let's cut it out!
-          </p>
-          <form action="/generate" method="post">
+          <h1>Contact</h1>
+          <form class="contact-form" action="/receiveContact" method="post">
             <input
-              class="shortener-form-input"
+              class="contact-form-input"
               type="text"
-              name="inputURl"
-              id="ipURl"
-              placeholder="Paste your URL here"
+              name="senderName"
+              id="senderName"
+              placeholder="Enter your name"
               required
             />
-            <button class="shorten-button" type="submit">Shorten</button>
+            <input
+              class="contact-form-input"
+              type="email"
+              name="senderEmail"
+              id="senderEmail"
+              placeholder="Enter your Email ID"
+              required
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Enter your message"
+            ></textarea>
+            <button class="contact-btn" id="contact-btn" type="submit">
+              Send
+            </button>
           </form>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
