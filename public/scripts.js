@@ -4,6 +4,7 @@ $(".get-start-button").click(() => {
 
 $(".burger").click(() => {
   $(".nav-items").toggleClass("nav-items-active");
+  $(".nav-bar").toggleClass("colorise-nav");
 });
 
 function copyToClipboard(text) {
