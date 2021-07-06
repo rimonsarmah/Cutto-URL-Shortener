@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 });
 
 mongoose.connect(
-  "mongodb://localhost:27017/cuttoDB",
+  process.env.DB_LINK,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -92,7 +92,10 @@ app.post("/receiveContact", (req, res) => {
   });
 });
 app.post("/generate", (req, res) => {
-  const inputURL = req.body.inputURl;
+  let inputURL = req.body.inputURl;
+  if (!inputURL.startsWith("http")) {
+    inputURL = "https://" + inputURL;
+  }
   let newURL = shortenedUrls({
     _id: shortid.generate(),
     link: inputURL,
@@ -139,6 +142,6 @@ app.get("/:link", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is running at port 3000");
+app.listen(process.env.PORT, () => {
+  console.log("Server is running at given port.");
 });
